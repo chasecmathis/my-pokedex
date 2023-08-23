@@ -11,8 +11,6 @@ import {
 
 import { DeleteOutline } from "@mui/icons-material";
 
-import Egg from '../../public/images/egg.png'
-
 export default function TeamCard({ pokemon, handleDelete }) {
   return (
     <Card
