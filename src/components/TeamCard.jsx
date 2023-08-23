@@ -9,6 +9,8 @@ import {
   IconButton,
 } from "@mui/material";
 
+import Egg from '../data/egg.png'
+
 import { DeleteOutline } from "@mui/icons-material";
 
 export default function TeamCard({ pokemon, handleDelete }) {
@@ -45,7 +47,7 @@ export default function TeamCard({ pokemon, handleDelete }) {
           component="img"
           src={
             pokemon === null
-              ? "https://archives.bulbagarden.net/media/upload/a/ad/Spr_b_5b_Egg.png"
+              ? Egg
               : pokemon.sprites.other["official-artwork"].front_default
           }
           align="center"
