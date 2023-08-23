@@ -37,7 +37,6 @@ export default function PokemonCard({ pokemon, handleOpen }) {
           <CardMedia
             component="img"
             image={pokemon.sprites.other.dream_world.front_default || pokemon.sprites.other["official-artwork"].front_default}
-            align="center"
             sx={{
               width: "100%",
               height: "100%",
