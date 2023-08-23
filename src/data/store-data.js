@@ -64,7 +64,7 @@ async function fetchAllPokemon() {
           pokemonData.flavor_text_entries.length !== 0
             ? pokemonData.flavor_text_entries.find(
                 (desc) => desc.language.name === "en"
-              ).flavor_text
+              ).flavor_text.replace('\f', '')
             : null,
         generation: pokemonData.generation.name,
         evolves_from: pokemonData.evolves_from_species
