@@ -9,7 +9,7 @@ const newColor = (name, main, light) => {
 
 let theme = createTheme({
   palette: {
-    contrastThreshold: 4.0,
+    contrastThreshold: 3.0,
   },
 });
 

@@ -7,11 +7,11 @@ const pokemon = require("../data/pokemon.json");
 const generations = require("../data/gens.json");
 const pkmnTypes = require("../data/types.json");
 
-import PokemonCard from "../components/PokemonCard";
-import SearchSelectBar from "../components/SearchSelectBar";
-import TypeFilter from "../components/TypeFilter";
-import PokemonWindow from "../components/PokemonWindow";
-import Header from "../components/Header";
+import PokemonCard from "../components/dex/PokemonCard";
+import SearchSelectBar from "../components/filters/SearchSelectBar";
+import TypeFilter from "../components/filters/TypeFilter";
+import PokemonWindow from "../components/dex/PokemonWindow";
+import Header from "../components/layout/Header";
 
 export default function Home() {
   const perPage = 100;
@@ -20,7 +20,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [pkmn, setPkmn] = useState(pokemon);
   const [types, setTypes] = useState(
-    pkmnTypes.map((type) => ({ name: type, checked: false }))
+    pkmnTypes.map((type) => ({ name: type.name, checked: false }))
   );
   const [generation, setGeneration] = useState("all");
   const [windowPkmn, setWindowPkmn] = useState(null);
