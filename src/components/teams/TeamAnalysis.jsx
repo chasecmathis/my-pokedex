@@ -75,6 +75,7 @@ export default function TeamAnalysis({ team }) {
                     border: 2,
                     borderColor: `${type.name}` + ".light",
                     fontWeight: 500,
+                    mr: "6px"
                   }}
                 />
 
