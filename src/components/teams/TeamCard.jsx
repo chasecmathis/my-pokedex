@@ -48,7 +48,6 @@ export default function TeamCard({ pokemon, handleDelete }) {
               ? "https://archives.bulbagarden.net/media/upload/a/ad/Spr_b_5b_Egg.png"
               : pokemon.sprites.other["official-artwork"].front_default
           }
-          align="center"
           sx={{
             width: "100%",
             height: "100%",
