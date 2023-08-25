@@ -61,7 +61,7 @@ export default function TeamAnalysis({ team }) {
                 sx={{
                   textTransform: "capitalize",
                   display: "flex",
-                  justifyContent: "space-between",
+                  justifyContent: "left",
                   alignItems: 'center'
                 }}
               >
