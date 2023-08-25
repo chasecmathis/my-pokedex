@@ -17,9 +17,9 @@ export default function Nav() {
     <AppBar color="primary" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <CatchingPokemonIcon sx={{ display: "flex", mr: 1 }} />
+          <CatchingPokemonIcon sx={{ display: "flex", align: "center", mr: 1 }} />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component={Link}
             href="/"
@@ -27,12 +27,12 @@ export default function Nav() {
               mr: 2,
               display: "flex",
               fontWeight: 700,
-              letterSpacing: ".1rem",
+              letterSpacing: "1px",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            MyPOKÉDEX
+            MewDex
           </Typography>
           <Box>
             {pages.map((page) => (
