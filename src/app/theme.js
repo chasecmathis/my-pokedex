@@ -15,7 +15,7 @@ let theme = createTheme({
 
 export default theme = createTheme(theme, {
   palette: {
-    primary: { main: "#ee1515", light: "#fde8e8" },
+    primary: { main: "#800080", light: "#ffd9ff" },
     normal: newColor("normal", "#A8A77A", "#dcdcca"),
     fire: newColor("fire", "#EE8130", "#f8cdac"),
     water: newColor("water", "#6390F0", "#c1d3f9"),
