@@ -2,14 +2,15 @@
 import { Container, Grid, Pagination } from "@mui/material";
 import React, { useState, useEffect } from "react";
 
-import TeamCard from "@/components/TeamCard";
-import SearchSelectBar from "@/components/SearchSelectBar";
-import TypeFilter from "@/components/TypeFilter";
-import PokemonAvatar from "@/components/PokemonAvatar";
+import TeamCard from "@/components/teams/TeamCard";
+import SearchSelectBar from "@/components/filters/SearchSelectBar";
+import TypeFilter from "@/components/filters/TypeFilter";
+import PokemonAvatar from "@/components/teams/PokemonAvatar";
 
 const pokemon = require("@/data/pokemon.json");
 const generations = require("@/data/gens.json");
 const pkmnTypes = require("@/data/types.json");
+
 export default function Teams() {
   const perPage = 108;
 
@@ -18,7 +19,7 @@ export default function Teams() {
   const [search, setSearch] = useState("");
   const [pkmn, setPkmn] = useState(pokemon);
   const [types, setTypes] = useState(
-    pkmnTypes.map((type) => ({ name: type, checked: false }))
+    pkmnTypes.map((type) => ({ name: type.name, checked: false }))
   );
   const [generation, setGeneration] = useState("all");
 
@@ -74,21 +75,24 @@ export default function Teams() {
 
   function handleDelete(e, pkmn) {
     setTeam((prevTeam) => {
-        // Create a copy of the array
-        const newTeam = [...prevTeam];
-        newTeam.splice(newTeam.indexOf(pkmn), 1);
-        newTeam.push(null);        
-        return newTeam; 
-      });
+      // Create a copy of the array
+      const newTeam = [...prevTeam];
+      newTeam.splice(newTeam.indexOf(pkmn), 1);
+      newTeam.push(null);
+      return newTeam;
+    });
   }
 
   return (
-    <>
+    <main>
       <Container maxWidth="lg" sx={{ py: 6 }}>
         <Grid container spacing={3}>
           {team.map((pkmn, index) => (
             <Grid item key={index} xs={6} md={4} lg={2}>
-              <TeamCard pokemon={pkmn} handleDelete={(e) => handleDelete(e, pkmn)}/>
+              <TeamCard
+                pokemon={pkmn}
+                handleDelete={(e) => handleDelete(e, pkmn)}
+              />
             </Grid>
           ))}
         </Grid>
@@ -122,6 +126,6 @@ export default function Teams() {
           onChange={handlePagination}
         />
       </Container>
-    </>
+    </main>
   );
 }

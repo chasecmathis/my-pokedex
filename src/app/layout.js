@@ -5,8 +5,8 @@ import "@fontsource/roboto/700.css";
 
 import ThemeRegistry from "./ThemeRegistry";
 
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+import Nav from "@/components/layout/Nav";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "My Pokedex App",
