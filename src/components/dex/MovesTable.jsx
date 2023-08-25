@@ -51,10 +51,15 @@ export default function MovesTable({ pkmn }) {
                     >
                       <Chip
                         size="small"
-                        color={moveData.type}
                         label={moveData.type}
                         variant="filled"
-                        sx={{ minWidth: 70, color: "white"}}
+                        sx={{
+                          bgcolor: `${moveData.type}` + ".main",
+                          color: "white",
+                          border: 2,
+                          borderColor: `${moveData.type}` + ".light",
+                          fontWeight: 500
+                        }}
                       />
                     </TableCell>
                     <TableCell

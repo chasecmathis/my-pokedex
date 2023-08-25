@@ -6,6 +6,7 @@ import TeamCard from "@/components/teams/TeamCard";
 import SearchSelectBar from "@/components/filters/SearchSelectBar";
 import TypeFilter from "@/components/filters/TypeFilter";
 import PokemonAvatar from "@/components/teams/PokemonAvatar";
+import TeamAnalysis from "@/components/teams/TeamAnalysis";
 
 const pokemon = require("@/data/pokemon.json");
 const generations = require("@/data/gens.json");
@@ -97,7 +98,8 @@ export default function Teams() {
           ))}
         </Grid>
       </Container>
-      <Container maxWidth="md">
+      <Container maxWidth="md" color="">
+        <TeamAnalysis team={team} />
         <SearchSelectBar
           onSearch={handleSearch}
           onChange={handleGeneration}

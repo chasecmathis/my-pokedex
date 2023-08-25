@@ -43,7 +43,7 @@ export default function PokemonWindow({ handleClose, windowPkmn }) {
               color={t}
               label={t}
               variant="outlined"
-              sx={{ ml: 1 }}
+              sx={{ ml: 1, fontWeight: 500 }}
             />
           ))}
         </Box>

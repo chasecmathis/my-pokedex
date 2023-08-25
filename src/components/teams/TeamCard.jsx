@@ -76,7 +76,7 @@ export default function TeamCard({ pokemon, handleDelete }) {
             sx={{
               display: "flex",
               justifyContent: "center",
-              pt: '4px'
+              pt: "4px",
             }}
           >
             {pokemon.types.map((t) => (
@@ -86,7 +86,7 @@ export default function TeamCard({ pokemon, handleDelete }) {
                 label={t}
                 variant="outlined"
                 size="small"
-                sx={{ ml: "6px" }}
+                sx={{ ml: "6px", fontWeight: 500 }}
               />
             ))}
           </Container>
