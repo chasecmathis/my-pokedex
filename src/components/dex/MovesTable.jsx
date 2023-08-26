@@ -23,9 +23,9 @@ export default function MovesTable({ pkmn }) {
           <TableHead sx={{ bgcolor: `${pkmn.types[0]}` + ".light" }}>
             <TableRow>
               <TableCell align="right">Level</TableCell>
-              <TableCell align="right">Move</TableCell>
-              <TableCell align="right">Type</TableCell>
-              <TableCell align="right">Category</TableCell>
+              <TableCell align="left">Move</TableCell>
+              <TableCell align="left">Type</TableCell>
+              <TableCell align="left">Category</TableCell>
               <TableCell align="right">Power</TableCell>
               <TableCell align="right">Acc.</TableCell>
               <TableCell align="left">Desc.</TableCell>
@@ -40,13 +40,13 @@ export default function MovesTable({ pkmn }) {
                   <TableRow key={move.name}>
                     <TableCell align="right">{move.level}</TableCell>
                     <TableCell
-                      align="right"
+                      align="left"
                       sx={{ textTransform: "capitalize" }}
                     >
                       {move.name.replace("-", " ")}
                     </TableCell>
                     <TableCell
-                      align="right"
+                      align="left"
                       sx={{ textTransform: "capitalize" }}
                     >
                       <Chip
@@ -63,7 +63,7 @@ export default function MovesTable({ pkmn }) {
                       />
                     </TableCell>
                     <TableCell
-                      align="right"
+                      align="left"
                       sx={{ textTransform: "capitalize" }}
                     >
                       {moveData.category}
