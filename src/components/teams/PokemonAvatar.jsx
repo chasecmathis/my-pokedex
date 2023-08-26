@@ -14,7 +14,7 @@ export default function PokemonAvatar({ team, pkmn, handleAdd }) {
         variant="outlined"
         sx={{
           bgcolor: pkmn.types[0] + ".light",
-          borderRadius: "50%",
+          borderRadius: "15%",
           width: "75px",
           height: "75px",
           "&:hover": !full
@@ -44,7 +44,6 @@ export default function PokemonAvatar({ team, pkmn, handleAdd }) {
             component="img"
             src={pkmn.sprites.front_default}
             alt={pkmn.name}
-            align="center"
             sx={{
               width: "100%",
               height: "100%",
