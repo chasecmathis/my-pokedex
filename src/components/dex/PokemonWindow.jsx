@@ -52,7 +52,7 @@ export default function PokemonWindow({ handleClose, windowPkmn }) {
         </IconButton>
       </DialogTitle>
       <DialogContent dividers>
-        <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+        <Box sx={{ display: { md: "flex"}, alignItems: "center", mb: 1 }}>
           <Box
             component="img"
             sx={{
