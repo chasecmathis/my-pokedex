@@ -35,7 +35,7 @@ export default function Home() {
           (generation === "all" || pkmn.generation === generation) &&
           (selectedTypes.length === 0 ||
             selectedTypes.every((type) => pkmn.types.includes(type))) &&
-          pkmn.name.includes(search)
+          pkmn.name.replace('-', ' ').includes(search)
         );
       })
     );

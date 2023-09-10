@@ -45,7 +45,7 @@ export default function TeamCard({ pokemon, handleDelete }) {
           component="img"
           src={
             pokemon === null
-              ? "https://archives.bulbagarden.net/media/upload/a/ad/Spr_b_5b_Egg.png"
+              ? "/assets/images/egg.png"
               : pokemon.sprites.other["official-artwork"].front_default
           }
           sx={{
