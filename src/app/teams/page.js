@@ -34,7 +34,7 @@ export default function Teams() {
           (generation === "all" || pkmn.generation === generation) &&
           (selectedTypes.length === 0 ||
             selectedTypes.every((type) => pkmn.types.includes(type))) &&
-          pkmn.name.includes(search) &&
+          pkmn.name.replace("-", " ").includes(search) &&
           team.every((poke) => poke === null || poke.id !== pkmn.id)
         );
       })
