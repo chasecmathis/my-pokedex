@@ -16,7 +16,6 @@ export default function TeamCard({ pokemon, handleDelete }) {
     <Card
       sx={{
         border: 2,
-        width: "150px",
         borderRadius: "10%",
       }}
     >

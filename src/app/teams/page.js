@@ -87,7 +87,7 @@ export default function Teams() {
   return (
     <main>
       <Container maxWidth="lg" sx={{ py: 6 }}>
-        <Grid container spacing={3}>
+        <Grid container spacing={4}>
           {team.map((pkmn, index) => (
             <Grid item key={index} xs={6} md={4} lg={2}>
               <TeamCard
