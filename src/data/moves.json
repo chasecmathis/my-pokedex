@@ -7198,5 +7198,37 @@
         "type": "fairy",
         "category": "physical",
         "description": "No description"
+    },
+    {
+        "name": "blood-moon",
+        "accuracy": 100,
+        "power": 140,
+        "type": "normal",
+        "category": "special",
+        "description": "No description"
+    },
+    {
+        "name": "matcha-gotcha",
+        "accuracy": 90,
+        "power": 80,
+        "type": "grass",
+        "category": "special",
+        "description": "No description"
+    },
+    {
+        "name": "syrup-bomb",
+        "accuracy": 85,
+        "power": 60,
+        "type": "grass",
+        "category": "special",
+        "description": "No description"
+    },
+    {
+        "name": "ivy-cudgel",
+        "accuracy": 100,
+        "power": 100,
+        "type": "grass",
+        "category": "physical",
+        "description": "No description"
     }
 ]
