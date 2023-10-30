@@ -25,6 +25,11 @@ export default function Teams() {
   const [generation, setGeneration] = useState("all");
 
   useEffect(() => {
+    if (sessionStorage.getItem("team") != null)
+      setTeam(JSON.parse(sessionStorage.getItem("team")));
+  }, []);
+
+  useEffect(() => {
     setPkmn(
       pokemon.filter((pkmn) => {
         const selectedTypes = types
@@ -66,22 +71,30 @@ export default function Teams() {
   }
 
   function handleAdd(e, pkmn) {
+    let newTeam;
+
     setTeam((prevTeam) => {
       // Create a copy of the array
-      const newTeam = [...prevTeam];
+      newTeam = [...prevTeam];
       newTeam[newTeam.indexOf(null)] = pkmn;
       return newTeam;
     });
+
+    sessionStorage.setItem("team", JSON.stringify(newTeam));
   }
 
   function handleDelete(e, pkmn) {
+    let newTeam;
+
     setTeam((prevTeam) => {
       // Create a copy of the array
-      const newTeam = [...prevTeam];
+      newTeam = [...prevTeam];
       newTeam.splice(newTeam.indexOf(pkmn), 1);
       newTeam.push(null);
       return newTeam;
     });
+
+    sessionsStorage.setItem("team", JSON.stringify(newTeam));
   }
 
   return (
@@ -104,6 +117,7 @@ export default function Teams() {
           onSearch={handleSearch}
           onChange={handleGeneration}
           generations={generations}
+          generation={generation}
         />
         <TypeFilter types={types} onChange={handleTypes} />
       </Container>

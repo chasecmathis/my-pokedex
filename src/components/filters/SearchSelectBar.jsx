@@ -8,7 +8,7 @@ import {
   TextField,
 } from "@mui/material";
 
-export default function SearchSelectBar({ onSearch, onChange, generations }) {
+export default function SearchSelectBar({ onSearch, onChange, generations, generation }) {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
       <TextField
@@ -23,7 +23,7 @@ export default function SearchSelectBar({ onSearch, onChange, generations }) {
         <Select
           labelId="generation-select-label"
           id="generation-select"
-          defaultValue=""
+          value={generation}
           label="Generation"
           onChange={onChange}
         >
